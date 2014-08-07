@@ -1,0 +1,273 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } /* HTML5 display-role reset for older browsers */ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } table { border-collapse: collapse; border-spacing: 0; }
+
+/* Basics */
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body {
+    background: #fff;
+    font-family:'Oswald', Arial, sans-serif;
+    padding: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family:'Oswald', Arial, sans-serif;
+    font-weight: normal;
+    line-height: 1;
+}
+h1 {
+    font-weight: 400;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: #000;
+}
+.clr {
+    clear: both;
+}
+
+/* Site components */
+
+#page {
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px dotted #333;
+    color: #1A2740;
+}
+#logo {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+}
+    #logo img {
+        margin: 0;
+        width: 100px;
+    }
+    
+#top {
+    background: #f23054;
+    clear: both;
+    padding: 40px;
+}
+    #top .title {
+        color: white;
+        font-size: 120px;
+        margin: 0 0 40px;
+        font-weight: 400;
+        width: 100%;
+    }
+    #top .subtitle {
+        color: white;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 36px;
+        margin: 0;
+        width: 600px;
+        font-family: 'Lato', sans-serif;
+    }
+        #top .subtitle a {
+            font-weight: 600;
+        }
+        
+#callout {
+    background-color: #BF2C47;
+    color: white;
+    font-size: 21px;
+    padding: 20px 40px;
+    margin-bottom: 30px;
+    font-family: 'Inconsolata', sans-serif;
+}
+        
+.section .title {
+    background: #000;
+    border-bottom: 1px dotted #333;
+    color: #666;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 40px;
+    padding: 20px 40px;
+}
+.items {
+    background-color: black;
+}
+    .items a:hover {
+        color: #b344f3;
+    }
+    .items .item {
+        float: left;
+        width: 50%;
+        min-height: 200px;
+        padding: 40px;
+        background-color: black;
+        color: white;
+    }
+        .item.large {
+            width: 50%;
+        }
+        .item.small {
+            width: 33.3333333333%;
+        }
+        .items .item .item-title {
+            color: #fff;
+            font-size: 40px;
+            margin: 0 0 10px;
+        }
+        .items .item .item-url {
+            color: #666;
+            font-size: 20px;
+            line-height: 48px;
+            font-weight: 600;
+            margin: 0 0 10px;
+        }
+            .items .item .item-url a {
+                color: #666;
+            }
+            .items .item .item-url a:hover {
+                color: #b344f3;
+            }
+        .items .item .item-description {
+            color: #666;
+            margin-top: 5px;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        
+#bottom {
+    color: white;
+    clear: both;
+    height: 70px;
+    position: absolute;
+    text-align: right;
+    width: 100%;
+    z-index: 1000;
+    background: url('/img/tartan.png');
+}
+
+/* Media queries */
+
+@media (max-width: 640px) {
+    #logo {
+        top: 20px;
+        right: 20px;
+    }
+        #logo img {
+            width: 50px;
+        }
+    #top {
+        padding: 20px;
+        min-height: 0;
+    }
+        #top .title {
+            font-size: 50px;
+            line-height: 45px;
+        }
+        #top .subtitle {
+            width: 100%;
+            font-size: 24px;
+            line-height: 27px;
+        }
+    .section .title {
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 700;
+        padding: 20px;
+    }
+    .items .item {
+        width: 100%;
+        min-height: 0;
+        padding: 20px;
+    }
+        .items .item .item-title {
+            font-size: 24px;
+            line-height: 30px;
+        }
+        .items .item .item-url {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        .items .item .item-description {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    #bottom {
+        margin: 10px 0;
+        padding: 20px;
+        text-align: left;
+        font-size: 16px;
+        clear: both;
+        text-align: left;
+    }
+        #bottom .left {
+            display: none;
+        }
+        #bottom .right {
+            float: left;
+        }
+}
+
+/* Documentation pages */
+
+#documentation {
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 20px 40px;
+    position: relative;
+}
+    #documentation .menu {
+        float: left;
+        height: 200px;
+        position: relative;
+        width: 16.66667%;
+    }
+        #documentation .menu .wrap {
+            left: 0;
+            position: absolute;
+            top: 0;
+        }
+            #documentation .menu ul li {
+                margin: 0 0 15px;
+            }
+                #documentation .menu ul li a {
+                    color: #666;
+                    font-weight: 600;
+                }
+                #documentation .menu ul li a:hover,
+                #documentation .menu ul li.active a {
+                    color: white;
+                }
+        #documentation .menu.fixed .wrap {
+            left: 40px;
+            position: fixed;
+            top: 20px;
+        }
+    #documentation .main-content {
+        float: left;
+        margin-top: -20px;
+        max-width: 800px;
+        width: 83.33333%;
+    }
+        #documentation .main-content h2 {
+            color: #ccc;
+            font-size: 40px;
+            margin: 0 0 20px;
+            padding: 20px 0 0;
+        }
+        #documentation .main-content p {
+            color: #ccc;
+            margin: 0 0 20px;
+        }
+        #documentation .main-content .section {
+            margin: 0 0 80px;
+        }
