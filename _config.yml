@@ -2,4 +2,4 @@
 markdown: kramdown
 permalink: pretty
 safe: true
-baseurl: 'kilt-web-site'
+baseurl: /kilt-web-site
