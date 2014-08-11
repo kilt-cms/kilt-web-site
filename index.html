@@ -42,19 +42,8 @@ layout: default
         </div>
 
         <div class="section" id="features">
-            <h2>Features</h2>
-            <p>
-              <h3>Your Rails app remains a Rails app</h3>
-            </p>
-            <p>
-              <h3>No migrations</h3>
-            </p>
-            <p>
-              <h3>Fast content administration</h3>
-            </p>
-            <p>
-              <h3>Kilt is as easy to remove as it is to setup</h3>
-            </p>
+          {% capture features %}{% include features.html %}{% endcapture %}
+          {{ features }}
         </div>
 
         <div class="section" id="installation">
