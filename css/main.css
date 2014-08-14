@@ -220,22 +220,7 @@ tt, code, pre {
   display: block;
   white-space: pre;
 }
-.highlight .n {
-  color: #333333;
-}
 
-.highlight .o {
-  font-weight: bold;
-}
-
-.highlight .ss {
-  color: #990073;
-}
-
-.highlight .nn {
-  color: #333333;
-}
-
-.highlight .s3 {
-  color: #dd1144;
+.highlight {
+  margin-bottom: 20px;
 }
