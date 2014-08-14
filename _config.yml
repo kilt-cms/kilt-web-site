@@ -1,5 +1,5 @@
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 permalink: pretty
 safe: true
 baseurl: /kilt-web-site
