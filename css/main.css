@@ -203,6 +203,9 @@ a:hover {
             margin: 0 0 20px;
             padding: 20px 0 0;
         }
+        #documentation .main-content h3 {
+            margin: 0 0 20px;
+        }
         #documentation .main-content p {
             margin: 0 0 20px;
         }
