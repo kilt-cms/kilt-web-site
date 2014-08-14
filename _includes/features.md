@@ -8,8 +8,6 @@ After you install Kilt, you have a fully-functioning CMS.  Create a schema for e
 
 Kilt stores all of its data in one table, with each record as JSON. Pure, raw JSON. You ask for data from the CMS, you get JSON back.
 
-If you want to change the shape of your data, just edit your schema in "config/kilt/config.yml". Your admin screens will adjust.
-
 ###Your Rails app remains a Rails app
 
 Kilt gives you a CMS, and that's it.  It doesn't turn your Rails app into a "Kilt app" like other CMS libraries.
