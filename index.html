@@ -70,25 +70,8 @@ layout: default
         </div>
 
         <div class="section" id="installation">
-            <h2>Installation</h2>
-            <p>Start by adding the Kilt gem to your Gemfile:</p>
-{% highlight ruby %}
-  gem 'kilt-cms'
-{% endhighlight %}
-            <p>Then bundle your gems:</p>
-{% highlight bash %}
-  bundle install
-{% endhighlight %}
-            <p>Finally, in order to auto-load Kilt's dependencies, you must require Kilt in your application.rb:</p>
-{% highlight ruby %}
-module YourRailsApp
-  class Application < Rails::Application
-    require 'kilt' # just add this one line
-    # the rest of your Application below...
-  end
-end
-{% endhighlight %}
-            <p>You're done!</p>
+          {% capture installation %}{% include installation.md %}{% endcapture %}
+          {{ installation | markdownify }}
         </div>
 
 <div class="section" id="usage">
