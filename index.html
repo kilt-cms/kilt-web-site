@@ -51,44 +51,10 @@ layout: default
           {{ installation | markdownify }}
         </div>
 
-<div class="section" id="usage">
-  <h2>Usage</h2>
-  <h3>Authentication</h3>
-
-  <p>
-    Of course, you need to protect access to your Kilt CMS section.  Kilt comes with Basic HTTP Authentication out-of-the-box, which can be controlled in the "auth" section of kilt/config/creds.yml:
-  </p>
-
-{% highlight yaml %}
-auth:
-  username: YOUR_USERNAME
-  password: YOUR_PASSWORD
-{% endhighlight %}
-
-  <h3>S3 Storage</h3>
-
-  <p>By default, Kilt will store all file uploads to public/uploads. This obviously won't work for deployed sites, so Kilt comes with Amazon S3 support out-of-the-box.</p>
-  <p>If you would like to switch to S3, change the "storage" section of your config/kilt/config.yml to:</p>
-
-{% highlight yaml %}
-storage:
-  strategy: s3
-{% endhighlight %}
-
-  <p>
-    Provide your S3 credentials in the "s3" section of kilt/config/creds.yml:
-  </p>
-
-{% highlight yaml %}
-s3:
-  key: YOUR_S3_KEY
-  secret: YOUR_S3_SECRET
-  bucket: YOUR_S3_BUCKET
-{% endhighlight %}
-  <p>
-
-  </p>
-</div>
+        <div class="section" id="usage">
+          {% capture usage %}{% include usage.md %}{% endcapture %}
+          {{ usage | markdownify }}
+        </div>
 
     </div>
 
