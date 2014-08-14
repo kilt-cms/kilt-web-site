@@ -36,9 +36,8 @@ layout: default
     <div class="main-content">
 
         <div class="section" id="about">
-            <h2>About Kilt</h2>
-            <p>Kilt is a CMS that gets to the point.</p>
-            <p>Define the types of content you want to show on your site, and Kilt will provide a clean admin system to manage them.</p>
+          {% capture about %}{% include about.md %}{% endcapture %}
+          {{ about | markdownify }}
         </div>
 
         <div class="section" id="features">
