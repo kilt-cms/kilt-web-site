@@ -31,3 +31,18 @@ For each type, Kilt provides a list/detail screen for editing creating, editing,
 
 ![Kilt](img/admin2.png)
 ![Kilt](img/admin3.png)
+
+Retrieving the data entered into the admin system can be retrieved with a few simple commands:
+
+```ruby
+
+bagpipes = Kilt.bagpipes # returns all of the bagpipes as an Array of Hashes
+
+bagpipe = Kilt.get('sample-bagpipe')
+
+```
+
+Here is a sample front-end controller with a page for showing all bagpipes, and
+a detail page for each bagpipe.
+
+<script src="https://gist.github.com/darrencauthon/042a8e80c087e0625b7d.js"></script>
